@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gootu Inverters - Gootu Partner in Pakistan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E3A8A 0%, #10B981 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .hero-particles canvas {
+            display: block;
+        }
+        .product-card, .service-card, .testimonial-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover, .service-card:hover, .testimonial-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #F97316;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .language-switcher {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 5px;
+        }
+        .language-option {
+            padding: 5px 15px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .language-option.active {
+            background-color: white;
+            color: #1E3A8A;
+            font-weight: 500;
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .dark-mode {
+            background-color: #1a202c;
+            color: #e2e8f0;
+        }
+        .dark-mode .bg-white {
+            background-color: #2d3748;
+        }
+        .dark-mode .bg-gray-50 {
+            background-color: #4a5568;
+        }
+        .dark-mode .text-gray-600 {
+            color: #cbd5e0;
+        }
+        .dark-mode .text-gray-800 {
+            color: #e2e8f0;
+        }
+        .dark-mode .bg-blue-800 {
+            background-color: #2b6cb0;
+        }
+        .dark-mode .bg-orange-500 {
+            background-color: #ed8936;
+        }
+        .contact-icon {
+            transition: transform 0.3s ease;
+        }
+        .contact-icon:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-md dark:bg-gray-800">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-3">
+                    PT
+                </div>
+                <span class="text-xl font-bold text-blue-800 dark:text-white">Gootu <span class="text-orange-500">Inverters</span></span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Home</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">About</a>
+                <a href="#products" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Products</a>
+                <a href="#services" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Services</a>
+                <a href="#testimonials" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Testimonials</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Contact</a>
+            </nav>
+            
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition duration-300 shadow-md">
+                    Get a Quote
+                </a>
+            </div>
+            
+            <button class="md:hidden text-gray-700 dark:text-gray-300 focus:outline-none" id="mobile-menu-button">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white dark:bg-gray-800 w-full py-4 px-4 shadow-lg" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">About</a>
+                <a href="#products" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Products</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Services</a>
+                <a href="#testimonials" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Testimonials</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-800 dark:text-gray-300 dark:hover:text-white font-medium">Contact</a>
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium text-center transition duration-300 shadow-md">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20 md:py-32 relative">
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center relative z-10">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+                    Your Trusted <span class="text-orange-300">Gootu Partner</span> for Solar Inverters in Pakistan
+                </h1>
+                <p class="text-lg mb-8 opacity-90">
+                    Powering homes and businesses with cutting-edge, eco-friendly energy solutions. 
+                    As an authorized Gootu partner, we deliver world-class solar inverters tailored for Pakistan.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium text-center transition duration-300 shadow-lg">
+                        Get In Touch
+                    </a>
+                    <a href="#products" class="bg-white hover:bg-gray-100 text-blue-800 px-8 py-3 rounded-full font-medium text-center transition duration-300 shadow-lg">
+                        Explore Products
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="gootu10.png" 
+                     alt="Solar Inverters Installation in Bahawalpur" 
+                     class="rounded-xl shadow-2xl animate-float max W-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="bg-white dark:bg-gray-800 py-12 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-800 dark:text-blue-400 mb-2">500+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Inverters Installed</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-orange-500 mb-2">4+</div>
+                    <div class="text-gray-600 dark:text-gray-300">Years Experience</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-green-500 mb-2">24/7</div>
+                    <div class="text-gray-600 dark:text-gray-300">Support Available</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl font-bold text-blue-600 dark:text-blue-300 mb-2">100%</div>
+                    <div class="text-gray-600 dark:text-gray-300">Satisfaction Guarantee</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-700 parallax" style="background-image: url('https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 dark:text-white mb-4">About Gootu Inverters</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <img src="https://images.pexels.com/photos/9242809/pexels-photo-9242809.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                         alt="Our Team in Bahawalpur" 
+                         class="rounded-xl shadow-lg w-full transform hover:scale-105 transition duration-300">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Our Journey with Gootu</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Since 2023, Gootu Inverters has been a leading provider of solar inverter 
+                        solutions in Pakistan. Partnering with Gootu China, we combine local expertise with 
+                        global standards to deliver sustainable energy for homes and businesses.
+                    </p>
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-check-circle text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Certified Gootu Partner</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Authorized to provide genuine Gootu products and services</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start mb-4">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-leaf text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Eco-Friendly Solutions</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Reducing carbon footprint with renewable energy</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-headset text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Local Support</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Dedicated customer service in all over Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-50 dark:bg-gray-600 p-6 rounded-lg border-l-4 border-blue-600">
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/19747906/pexels-photo-19747906/free-photo-of-smiling-businessman-sitting-at-desk-with-computer.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                                 alt="CEO" 
+                                 class="w-16 h-16 rounded-full object-cover mr-4">
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Muhammad Pervaiz</h4>
+                                <p class="text-gray-600 dark:text-gray-300">Founder & CEO</p>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-gray-700 dark:text-gray-200 italic">
+                            "Our mission is to make reliable solar energy accessible across Pakistan with Gootu’s world-class technology."
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Partnership Highlight -->
+            <div class="mt-20 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                        <div class="bg-gray-100 dark:bg-gray-600 p-6 rounded-lg w-64 h-40 flex items-center justify-center">
+                            <div class="text-3xl font-bold text-blue-800 dark:text-blue-300">GOOTU</div>
+                        </div>
+                    </div>
+                    <div class="md:w-2/3 md:pl-8">
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-4">Proudly Partnered with Gootu</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-6">
+                            Our collaboration with Gootu ensures access to high-quality inverters designed for maximum efficiency and durability, perfectly suited for Pakistan’s climate.
+                        </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-award text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-700 dark:text-gray-300">ISO Certified Products</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-shield-alt text-green-600"></i>
+                                </div>
+                                <span class="text-gray-700 dark:text-gray-300">5-Year Warranty</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-orange-100 p-2 rounded-full mr-3">
+                                    <i class="fas fa-bolt text-orange-600"></i>
+                                </div>
+                                <span class="text-gray-700 dark:text-gray-300">High Efficiency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 dark:text-white mb-4">Our Gootu Inverter Products</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    High-quality solar inverters designed for Pakistan's energy needs
+                </p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-blue-100 dark:bg-blue-900 flex items-center justify-center">
+                        <img src="gootu35.png" 
+                             alt="Gootu 3kW Hybrid Inverter" 
+                             class="h-full w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Gootu 3.5kW Hybrid Inverter</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-bolt text-orange-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">3.5kW Output</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-battery-three-quarters text-green-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">48V DC</span>
+                            </div>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>98% efficiency rating</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>MPPT solar charge controller</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>5-year warranty</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Ideal for small homes</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Perfect for small households, ensuring reliable power with seamless grid/solar switching.
+                        </p>
+                        <a href="#contact" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 shadow-md inline-block text-center">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-green-100 dark:bg-green-900 flex items-center justify-center">
+                        <img src="gootu8.png" 
+                             alt="Gootu 8kW Hybrid Inverter" 
+                             class="h-full w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Gootu 8kW Hybrid Inverter</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-bolt text-orange-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">8kW Output</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-battery-three-quarters text-green-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">48V DC</span>
+                            </div>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>97.5% efficiency rating</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Dual MPPT controllers</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>5-year warranty</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Suited for medium businesses</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Power larger setups with this robust inverter, designed for durability in Pakistan’s climate.
+                        </p>
+                        <a href="#contact" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 shadow-md inline-block text-center">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
+                        <img src="gootu10.png" 
+                             alt="Gootu 10kW Hybrid Inverter" 
+                             class="h-full w-full object-contain">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Gootu 10kW Hybrid Inverter</h3>
+                        <div class="flex items-center mb-4">
+                            <div class="flex items-center mr-4">
+                                <i class="fas fa-bolt text-orange-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">10kW Output</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-battery-three-quarters text-green-500 mr-1"></i>
+                                <span class="text-gray-700 dark:text-gray-300">48V DC</span>
+                            </div>
+                        </div>
+                        <ul class="text-gray-600 dark:text-gray-300 mb-4 space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>98% efficiency rating</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Advanced MPPT technology</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>5-year warranty</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mt-1 mr-2"></i>
+                                <span>Ideal for commercial use</span>
+                            </li>
+                        </ul>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Built for high-demand applications, delivering unmatched performance for industries.
+                        </p>
+                        <a href="#contact" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded-lg transition duration-300 shadow-md inline-block text-center">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="bg-blue-800 hover:bg-blue-900 text-white px-8 py-3 rounded-full font-medium inline-flex items-center transition duration-300 shadow-lg">
+                    <i class="fas fa-cogs mr-2"></i> Contact Us for Custom Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50 dark:bg-gray-700 parallax" style="background-image: url('https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 dark:text-white mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Comprehensive solar inverter solutions for Pakistan
+                </p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-solar-panel text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Inverter Sales</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            High-efficiency Gootu inverters (3kW, 8kW, 10kW) tailored to your energy needs.
+                        </p>
+                        <a href="#contact" class="text-orange-500 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-green-600 flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Installation</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Professional installation by certified technicians for seamless solar integration.
+                        </p>
+                        <a href="#contact" class="text-orange-500 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-orange-500 flex items-center justify-center">
+                        <i class="fas fa-cogs text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Maintenance</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Comprehensive maintenance to keep your Gootu inverters at peak performance.
+                        </p>
+                        <a href="#contact" class="text-orange-500 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden transition duration-300 hover:border-orange-500 border border-transparent">
+                    <div class="h-48 bg-blue-800 flex items-center justify-center">
+                        <i class="fas fa-lightbulb text-white text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 dark:text-white mb-3">Energy Consulting</h3>
+                        <p class="text-gray-600 dark:text-gray-300 mb-4">
+                            Expert advice to maximize energy savings and system efficiency.
+                        </p>
+                        <a href="#contact" class="text-orange-500 font-medium inline-flex items-center">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-full font-medium inline-flex items-center transition duration-300 shadow-lg">
+                    <i class="fas fa-envelope mr-2"></i> Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 dark:text-white mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Trusted by homeowners and businesses across Pakistan
+                </p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "PowerTech installed our Gootu 3kW inverter flawlessly! The system has been running perfectly 
+                        for 1 year with no issues. Their support is exceptional."
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.pexels.com/photos/977796/pexels-photo-977796.jpeg?auto=compress&cs=tinysrgb&w=600" 
+                             alt="Fatima S." 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Rehman.</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Bahawalpur</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "As a business owner, I needed reliable power. Gootu’s 8kW inverter cut our bills by 70%. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" 
+                             alt="Ahmed R." 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Ahmed R.</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Islamabad</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 dark:bg-gray-700 p-8 rounded-xl shadow-md">
+                    <div class="flex items-center mb-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400 mr-1"></i>
+                            <i class="fas fa-star text-yellow-400"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6 italic">
+                        "Gootu Pakistan explained all Gootu inverter options patiently. Our solar system now powers our entire home!"
+                    </p>
+                    <div class="flex items-center">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=688&q=80" 
+                             alt="Zainab K." 
+                             class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800 dark:text-white">Zainab K.</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Sukhur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-700">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-extrabold text-blue-800 dark:text-white mb-4">Get In Touch</h2>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Ready to power your home or business with reliable solar energy?
+                </p>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-12 md:mb-0 md:pr-8">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4 contact-icon">
+                                <i class="fas fa-map-marker-alt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Our Office</h4>
+                                <p class="text-gray-600 dark:text-gray-300">near Javeed Cloth house Street # 4 Mela Gali, Bahawalpur, Punjab, Pakistan</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-green-100 p-3 rounded-full mr-4 contact-icon">
+                                <i class="fas fa-envelope text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Email Us</h4>
+                                <p class="text-gray-600 dark:text-gray-300">muhammadpervaiz1177a@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-orange-100 p-3 rounded-full mr-4 contact-icon">
+                                <i class="fas fa-phone-alt text-orange-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">Call Us</h4>
+                                <p class="text-gray-600 dark:text-gray-300">+92 307 0979115</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-600 p-3 rounded-full mr-4 contact-icon">
+                                <i class="fab fa-whatsapp text-white"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 dark:text-white">WhatsApp</h4>
+                                <p class="text-gray-600 dark:text-gray-300">+92 307 0979115</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mt-12 mb-6">Business Hours</h3>
+                    <div class="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm">
+                        <div class="flex justify-between py-2 border-b border-gray-200 dark:border-gray-600">
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Monday - Thursday</span>
+                            <span class="text-gray-600 dark:text-gray-300">9:00 AM - 11:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200 dark:border-gray-600">
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Friday</span>
+                            <span class="text-gray-600 dark:text-gray-300">8:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="flex justify-between py-2">
+                            <span class="font-medium text-gray-700 dark:text-gray-300">Saturday - Sunday</span>
+                            <span class="text-gray-600 dark:text-gray-300">9:00 AM - 11:00 PM</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mt-12 mb-6">Follow Site Creator</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/zubair-alltaf-21b250352/" target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center contact-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/ZubairAlltaf" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center contact-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/zubair.8.0/" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://preview--altaf-flutter-craft.lovable.app/" target="_blank" class="bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full w-12 h-12 flex items-center justify-center contact-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Reach Out Today</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-8">
+                        Connect with us to explore Gootu inverter solutions tailored for your needs. We're here to help you harness solar power efficiently!
+                    </p>
+                    <div class="space-y-6">
+                        <a href="https://wa.me/+923070979115" target="_blank" class="block bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-full font-medium text-center transition duration-300 shadow-md">
+                            <i class="fab fa-whatsapp mr-2"></i> Message on WhatsApp
+                        </a>
+                        <a href="tel:+923070979115" class="block bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-medium text-center transition duration-300 shadow-md">
+                            <i class="fas fa-phone-alt mr-2"></i> Call Now
+                        </a>
+                        <a href="mailto:muhammadpervaiz1177a@gmail.com" class="block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-medium text-center transition duration-300 shadow-md">
+                            <i class="fas fa-envelope mr-2"></i> Send an Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3523.0991042622157!2d71.71663667509364!3d29.38260444705498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b910002348c8f%3A0x4b6323c018b6e34c!2sJAVED%20CLOTH%20CENTER%20Javed%20cloth%20center%20mela%20Bazar%20Gali%20no%204%20Bahawalpur!5e0!3m2!1sen!2s!4v1698765432109!5m2!1sen!2s" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 dark:bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-blue-800 font-bold text-xl mr-3">
+                            PT
+                        </div>
+                        <span class="text-xl font-bold text-white">PowerTech <span class="text-orange-300">Inverters</span></span>
+                    </div>
+                    <p class="text-blue-200 mb-4">
+                        Your trusted Gootu partner for solar inverter solutions in Pakistan, 
+                        delivering reliable and eco-friendly energy since 2023.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-blue-200 hover:text-white">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition">Home</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition">About Us</a></li>
+                        <li><a href="#products" class="text-blue-200 hover:text-white transition">Products</a></li>
+                        <li><a href="#services" class="text-blue-200 hover:text-white transition">Services</a></li>
+                        <li><a href="#testimonials" class="text-blue-200 hover:text-white transition">Testimonials</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Our Services</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Inverter Sales</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Installation</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Maintenance</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Energy Consulting</a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition">Warranty Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-6">Contact Info</h3>
+                    <ul class="space-y-3 text-blue-200">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>near Javeed Cloth house Street # 4 Mela Gali, Bahawalpur, Punjab, Pakistan</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3"></i>
+                            <span>+92 307 0979115</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3"></i>
+                            <span>muhammadpervaiz1177a@gmail.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-3"></i>
+                            <span>+92 307 0979115</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-blue-200 mb-4 md:mb-0">
+                        © 2025 Gootu Inverters. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-orange-500 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition duration-300 opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-800 dark:bg-gray-900 text-white p-4 hidden">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <p class="mb-4 md:mb-0">
+                We use cookies to ensure the best experience. 
+                <a href="#" class="text-orange-300 hover:underline">Learn more</a>
+            </p>
+            <button id="accept-cookies" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-medium transition duration-300">
+                Accept Cookies
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js Initialization
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: { type: 'circle' },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: { enable: true, speed: 6, direction: 'none', random: false, straight: false, out_mode: 'out' }
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+                modes: { repulse: { distance: 100, duration: 0.4 }, push: { particles_nb: 4 } }
+            },
+            retina_detect: true
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Dark Mode Toggle
+        const toggleDarkMode = () => {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+        };
+        
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const mobileDarkModeToggle = document.getElementById('mobile-dark-mode-toggle');
+        if (darkModeToggle) darkModeToggle.addEventListener('click', toggleDarkMode);
+        if (mobileDarkModeToggle) mobileDarkModeToggle.addEventListener('click', toggleDarkMode);
+        
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+        
+        // Language Switcher
+        const languageOptions = document.querySelectorAll('.language-option');
+        languageOptions.forEach(option => {
+            option.addEventListener('click', () => {
+                languageOptions.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+            });
+        });
+        
+        // Cookie Consent
+        const cookieConsent = document.getElementById('cookie-consent');
+        const acceptCookies = document.getElementById('accept-cookies');
+        
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                cookieConsent.classList.remove('hidden');
+            }, 2000);
+        }
+        
+        acceptCookies.addEventListener('click', () => {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieConsent.classList.add('hidden');
+        });
+        
+        // Animate on Scroll
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.service-card, .testimonial-card, .product-card');
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'scale(1)';
+                }
+            });
+        };
+        
+        document.querySelectorAll('.service-card, .testimonial-card, .product-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'scale(0.95)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
